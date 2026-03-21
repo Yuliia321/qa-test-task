@@ -19,6 +19,20 @@ describe("GitHub Sign Up", () => {
 
         await browser.url('https://github.com')
     })
+/* Verify that a new user can reach the verification step during sign-up
+Preconditions:
+The user does not have an existing account on GitHub
+The user has a valid email address
+Steps:
+Navigate to https://github.com
+Click on the Sign up button - - user is redirected to new page https://github.com/signup?source=form-home-signup&user_email=fhyhyhf%40gmail.com
+Enter a valid email address
+Enter a valid password
+Enter a unique username
+click create account button
+ER:The user is redirected to the verification step
+The “Verify your account” page is displayed
+*/
 
 
     xit("should allow user to reach verification step", async () => {
@@ -52,6 +66,20 @@ describe("GitHub Sign Up", () => {
         await expect(browser).toHaveUrl(expectedUrl)             
     })
 
+
+
+    /**Verify that user can search repositories using search functionality
+Preconditions
+User opens GitHub
+User is on the main page: https://github.com
+Steps
+Click on the search field in the header 
+Enter a valid search query (e.g., react)
+Press Enter
+Expected Result
+User is redirected to search results page
+Search results are displayed
+Results match the entered query */
     xit("Verify that user can search repositories using search functionality " , async() => {
 
       const searchButton = await $('[aria-label="Search or jump to…"]')
@@ -78,6 +106,19 @@ describe("GitHub Sign Up", () => {
     })
 
 
+
+
+/**Verify that user can open "Explore GitHub Actions" page
+Preconditions:
+User is logged out or on the GitHub main page (https://github.com)
+Browser is open and ready
+Steps:
+Open https://github.com in the browser.
+click the Explore menu in the header.
+From the dropdown menu, click on GitHub Actions.
+Wait for the page to load.
+Expected Results:
+Browser URL contains /features/actions */
     xit(" Verify that user can open GitHub Actions link" , async() => {
 
     const actionsLink = await $("//a[@href='/features/actions']")
