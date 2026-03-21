@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Логи
+*.log
+
+# VS Code налаштування
+.vscode/
+
+# Папки збірки
+dist/
+build/
+
+# Файли тестів/тимчасові
+*.tmp
