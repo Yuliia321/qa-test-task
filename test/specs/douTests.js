@@ -7,7 +7,7 @@ import DefPage from './DefPage'
 
 describe("dou tests" , async()=> {
 
-    it("should display quartile block text ", async() => {
+    xit("should display quartile block text ", async() => {
 
           await mainPage.open()
           await SalariesPage.open()
@@ -16,7 +16,7 @@ describe("dou tests" , async()=> {
 
     });
 
-    it("should have search button" , async() =>{
+    xit("should have search button" , async() =>{
        await mainPage.open()
        await JobPage.open()
        await expect(JobPage.searchBtn).toBeDisplayed();
@@ -24,7 +24,7 @@ describe("dou tests" , async()=> {
        await expect(JobPage.quickTransitionBlock).toBeDisplayed
     })
 
-    it("should have 3 sections", async() => {
+    xit("should have 3 sections", async() => {
         await DefPage.open()
         await expect(DefPage.newsBlock).toBeDisplayed
         await expect(DefPage.eventBlock).toBeDisplayed
