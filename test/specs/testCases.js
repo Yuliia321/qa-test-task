@@ -119,7 +119,7 @@ From the dropdown menu, click on GitHub Actions.
 Wait for the page to load.
 Expected Results:
 Browser URL contains /features/actions */
-    xit(" Verify that user can open GitHub Actions link" , async() => {
+    it(" Verify that user can open GitHub Actions link" , async() => {
 
     const actionsLink = await $("//a[@href='/features/actions']")
     await actionsLink.waitForDisplayed({ timeout: 5000 });

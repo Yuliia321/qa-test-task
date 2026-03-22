@@ -56,7 +56,7 @@ await browser.pause(2000)
 });
 
 
-xit("should show getAttribute command", async()=> {
+it("should show getAttribute command", async()=> {
 await browser.url('https://dou.ua/search');
 let inputSearch = await $('#gsc-i-id1')
 let attr  = await inputSearch.getAttribute("aria-label")
@@ -69,7 +69,7 @@ console.log("Placehodler attribute is:" + attr)
 
 });
 
-xit( "should show getLocation command", async() =>{
+it( "should show getLocation command", async() =>{
  await browser.url('https://dou.ua');
 
  let inputSearch = await $('#txtGlobalSearch')

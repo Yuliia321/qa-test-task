@@ -3,7 +3,7 @@ import assert from assert
 
 describe("Webdriverio main page", () => {
 
-    xit("should open  API page", async () => {
+    it("should open  API page", async () => {
         await browser.url('https://webdriver.io/');
 
 
@@ -22,7 +22,7 @@ describe("Webdriverio main page", () => {
     });
 
         
-    xit("should navigate to WebDriver section", async () => {
+    it("should navigate to WebDriver section", async () => {
         const webDriverLink = await $('a=WebDriver')
         await expect(webDriverLink).toHaveText('WebDriver')
         const href = await webDriverLink.getAttribute('href')
@@ -31,7 +31,7 @@ describe("Webdriverio main page", () => {
         await expect(browser).toHaveUrl('https://webdriver.io/docs/api/webdriver');
     });
 
-    xit("should use search", async () => {
+    it("should use search", async () => {
         const searchField = await $(".DocSearch-Button-Placeholder")
         await searchField.click()
         const searchInput = await  $(".DocSearch-Input")
@@ -42,7 +42,7 @@ describe("Webdriverio main page", () => {
       // await browser.pause(20000) 
     });
 
-    xit("should demonstrate  scrollIntoView command ", async()=>{
+    it("should demonstrate  scrollIntoView command ", async()=>{
         await browser.url('https://webdriver.io/');
         const apiLink =  await $("nav a[href='/docs/api']")
         await apiLink.click()
@@ -51,7 +51,7 @@ describe("Webdriverio main page", () => {
 
     });
 
-    xit("Checks if an element can be clicked", async()=> {
+    it("Checks if an element can be clicked", async()=> {
        await browser.url('https://webdriver.io/');
         const apiLink =  await $("nav a[href='/docs/api']")
         await apiLink.click()
@@ -59,7 +59,7 @@ describe("Webdriverio main page", () => {
         await expect(protocolCommandLink).toBeClickable();
     });
 
-    xit("Should check if protocolCommandLink  is visible", async()=> {
+    it("Should check if protocolCommandLink  is visible", async()=> {
        await browser.url('https://webdriver.io/');
         const apiLink =  await $("nav a[href='/docs/api']")
         await apiLink.click()
@@ -67,7 +67,7 @@ describe("Webdriverio main page", () => {
         await expect(protocolCommandLink).toBeDisplayed();
     });
 
-    xit("should get html for element, click on it ", async()=> {
+    it("should get html for element, click on it ", async()=> {
        await browser.url('https://webdriver.io/');
         const apiLink =  await $("nav a[href='/docs/api']")
         await apiLink.click()
@@ -77,7 +77,7 @@ describe("Webdriverio main page", () => {
         await protocolCommandLink.click();
        });
 
-     xit("should wait until text WebDriver Protocol appear ", async()=> {
+     it("should wait until text WebDriver Protocol appear ", async()=> {
        await browser.url('https://webdriver.io/');
         const apiLink =  await $("nav a[href='/docs/api']")
         await apiLink.click()

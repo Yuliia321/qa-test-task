@@ -26,14 +26,9 @@ class SignUpPage {
 async clickCreateAccountButton() {
   
   await this.createAccountButton.waitForDisplayed({ timeout: 5000 });
-
-   
-        await this.createAccountButton.scrollIntoView();
-
-        await browser.pause(500);
-
-   
-        await browser.execute(el => el.click(), await this.createAccountButton);
+  await this.createAccountButton.scrollIntoView();
+  await browser.pause(500);
+  await browser.execute(el => el.click(), await this.createAccountButton);
     }}
 
 export default new SignUpPage()
